@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<title>图像倾斜效果</title>
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/global.css" rel="stylesheet" type="text/css" />
+	<link href="css/normalize.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+	
+	<style type="text/css">
+		/* Header */
+		.codrops-header {
+			text-align: center;
+			width:100%;
+			height: 100vh;
+			overflow: hidden;
+			background-size:cover;
+			background: url(images/bg_home_street.jpg) no-repeat center center;
+			
+		}
+		
+		.hero {
+			position: absolute;
+			top: 60px;
+			left: 60px;
+			bottom: 60px;
+			right: 60px;
+			overflow: hidden;
+			
+		}
+		
+		.hero__imgwrap {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			/*background-color: rgba(60, 60, 62, 0.49);
+			transition: opacity 500ms;
+  -webkit-transition: opacity 500ms;*/
+		}
+		
+		/*.hero__imgwrap::after {
+			content: '';
+			position: absolute;
+			background: rgba(76,0,1,0.1);
+			
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+		}
+		
+		.hero__img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 100%;
+			height: 100vh;
+			-webkit-transform: translate3d(-50%,-50%,0);
+			transform: translate3d(-50%,-50%,0);
+		}*/
+		
+		/*.hero__imgwrap .tilt__back,
+		.hero__imgwrap .tilt__front {
+			background-size: auto 100vh;
+		}*/
+		
+		.tilt {
+			overflow: hidden;
+			position: relative;
+			width: 100%;
+			height: 100%;
+			margin: 0 auto;
+		}
+
+		.tilt__back,
+		.tilt__front {
+			width: 100%;
+			height: 100%;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+		}
+		
+		.tilt__back {
+			position: relative;
+		}
+		
+		.tilt__front {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	</style>
+	</head>
+	<body>
+<div class="container">
+	<header class="codrops-header">
+		<div class="hero">
+			<div class="hero__imgwrap">
+				<img class="hero__img tilt-effect" data-tilt-options='{ "extraImgs":3, "bgfixed":false, "opacity" : 0.5, "movement": { "perspective" : 1200, "translateX" : -5, "translateY" : -5, "rotateX" : -5, "rotateY" : -5  } }' src="images/bg_home_street.jpg" alt="Hero image" />
+			</div>
+		</div>
+	</header>
+	<script src="js/tiltfx.js" type="text/javascript"></script>
+</div>
+</body>
+</html>

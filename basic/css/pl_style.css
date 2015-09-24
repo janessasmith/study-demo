@@ -1,0 +1,141 @@
+@charset "utf-8";
+/*平凉人物*/
+/*平凉人物-header*/
+.plCharacter_header{height: 60px;min-width: 1000px;background: #000000;overflow: hidden;position: fixed;top: 0px;left: 0px;width: 100%;z-index: 1000}
+.plCharacter_logo{width: 149px;height: 60px;background: url("../images/plCharacter_logo_02.jpg") no-repeat left center;}
+.plCharacter_email p{display: block;height: 20px;color: #ffffff;margin-top: 20px;margin-left:13px;line-height: 18px;background: #c81f1f;padding: 0px 11px;}
+.plCharacter_nav ul li{ float: left;margin-left: 29px;line-height: 60px;cursor: pointer;}
+.plCharacter_nav ul li a{color: #ffffff;font-size: 14px;}
+/*平凉人物-footer*/
+.plCharacter_footer{height: 53px;min-width: 1000px;text-align: center;padding-top: 7px;background: #000000;position: absolute;bottom: 0px;left: 0px;width: 100%;}
+.plCharacter_footer p{text-align: center;color: #4a4949;line-height: 22px;font-size: 12px;}
+.plCharacter_footer p span{margin-right: 4px;}
+.plCharacter_footer_span1{margin-left: 4px;}
+/*cont*/
+.plCharacter{position: absolute;top: 60px;overflow:hidden;overflow: hidden;z-index: -5}
+/*history*/
+.history{position: relative;height: 100%;width: 100%;}
+.history_bg{position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;z-index: -1}
+.history_bg img{display: block;width: 100%;}
+.history_icon{margin-left: 42px;margin-top: 88px;margin-bottom: 40px;}
+.history_txt{padding: 0px 58px;font-size: 14px;color: #1f1f1f;text-indent: 2em;line-height: 24px;}
+.history_img_container .img_link,.history_img_container img{display: block;}
+.history_img_container{height: 190px;}
+.history_img_container{position: absolute;top: 0px;}
+.history_img{height: 190px;width: 600px;overflow: hidden;margin: 0px 200px;overflow: hidden;position: relative;}
+.history_left{margin-left: 154px;height: 36px;width: 36px;background: url("../images/his_left_23.png") no-repeat left center #1b1b1b;margin-top: 62px;cursor: pointer;}
+.history_right{margin-right: 154px;background: url("../images/his_right_03.png") no-repeat left center #1b1b1b;height: 36px;width: 36px;margin-top: 62px;cursor: pointer;}
+.historyPerson{width: 120px;margin-right: 40px;float: left;text-align: center;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.historyPerson a{line-height: 40px;font-size: 14px;color: #1b1b1b;}
+.history_right:hover{background: url("../images/his_right_03.png") no-repeat left center #a90000;}
+.history_left:hover{background: url("../images/his_left_23.png") no-repeat left center #a90000;}
+.history_img_box{margin-top: 74px;}
+/*stories*/
+.stories{position: relative;}
+.stories_title{height: 74px;background: url("../images/stories_title_bg_06.png") no-repeat left 0px;margin-top: 40px;z-index: 100;float: left;}
+.stories_title p{line-height: 74px;font-size: 36px;color: #ffffff;padding-left: 16px;}
+.stories_txt_box{width: 340px;height: 380px;position: relative;background: #ffffff;display: none;}
+.stories_txt_select{display: block;}
+.stories_txt{float: right;z-index: 1000;right: 0px;}
+.history_text{position: relative;}
+.stories_txt_time{margin-left:25px;width: 75px;height: 74px;background: url("../images/stroies_time_bg_14.jpg") no-repeat 2px 8px;font-weight: 300;margin-top: 29px;}
+.time_mouth{font-size: 48px;line-height: 48px;color: #555;}
+.time_day{font-size: 24px;line-height: 36px;color: #a3a3a3;margin-top: 42px;}
+.stories_txt_title{font-size: 24px;line-height: 3;float: right;margin-right: 25px;color: #a3a3a3;font-weight: 300;}
+.stories_txt_cont p{font-size: 14px;color: #555555;line-height: 30px;}
+.stories_txt_cont{margin-top: 14px;padding: 0px 30px;}
+.stories_img{position: absolute;top: 0px;left:0px;z-index: -1;}
+.stories_txt_link{display: block;height: 35px;line-height: 35px;width: 100px;background: #ea7777;text-align: center;font-size: 16px;color: #ffffff;position: absolute;left: 30px;bottom: 29px;}
+.stories_img_container{position: absolute;width:100%;height:100%;top: 0px;left: 0px;}
+.stories_box{width: 1320px;position: absolute;margin-left: -660px;left:50%;height: 100%;z-index: 300;height: 100%;top: 0px;}
+.stories_box .stories_link_btn{height:110px;width: 110px;position: relative;cursor: pointer;margin-top: 280px;z-index: 200}
+.stories_btn_bg{background:#000000;opacity: 0.7;zoom: 1;height: 110px;filter:alpha(opacity=70);}
+.stories_icon{position: absolute;top: 0px;left: 0px;height: 110px;width: 110px;z-index: 4}
+.stories_btn_left .stories_icon{background: url("../images/stories_left_03.png") no-repeat left center;}
+.stories_btn_right .stories_icon{background: url("../images/stories_right_13.png") no-repeat left center;}
+.stories_img_box{overflow: hidden;}
+.stories_img_box{float: left;position: relative;}
+.stories_photo{position: absolute;top: 0px;left: 0px;display: block;}
+/*当代人物*/
+.ddrw{background: #161616;position: relative;overflow: hidden;}
+.ddrw_img{position: relative;height: 480px;}
+.ddrw_center{position: absolute;height: 480px;width: 380px;top: 0px;left: 50%;margin-left: -190px;}
+.ddrw_img_container{height:480px;position: absolute;top: 0px;}
+.ddrw_img_box a,.ddrw_img_box img{display: block;}
+.ddrw_img_box{height: 480px;width: 380px;float: left;margin-left: 40px;position: relative;}
+.select_img .ddrw_img_zz{opacity: 0;display: none;}
+.select_img .introduction_box{display: block}
+.ddrw_img_zz{height: 480px;width: 380px;background: #000;opacity: 0.5;filter:alpha(opacity=50);position: absolute;top: 0px;left: 0px;zoom: 1;}
+.introduction_box{width: 550px;position: absolute;z-index: 30;top: 53px;left: -310px;display: none;}
+.introduction_title{margin-bottom: 56px;background:url("../images/stories_title_bg_06.png") no-repeat left 0px;}
+.introduction_title p{font-size: 36px;color: #ffffff;line-height: 86px;font-weight: bold;padding-left: 25px;}
+.introduction_txt{height: 215px;position: relative;width: 496px;padding: 23px 27px 12px 27px}
+.ddrw_name{color: #ffffff;font-size: 26px;padding: 0px 11px;border-bottom: 4px solid #bc102e;line-height: 64px;font-weight: bold;float: left;}
+.ddrw_jj{margin-left: 5px;font-size: 14px;line-height: 1;margin-top:30px;float: left;min-width:380px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; }
+.introduction_txt_bg{position: absolute;z-index:-1;background: #000000;opacity: 0.6;filter:alpha(opacity=60);zoom: 1;height: 250px;width: 550px;top: 0px;left: 0px;}
+.introduction_txt p{color: #ffffff;}
+.introduction{font-size: 14px;line-height: 24px;color: #ffffff;margin-top: 15px;}
+.introduction_name{border-bottom: 1px solid #787878;height: 67px;display: block;}
+.introduction_name span{display: block;}
+.thumbnail_name{display: none;text-align: center;line-height: 1;font-size: 18px;color: #ffffff;cursor: pointer;}
+.thumbnail_left{height: 52px;width: 30px;background: url("../images/thumbnail_left_33.jpg") no-repeat left center;margin-left: 21px;margin-top: 47px;cursor: pointer}
+.thumbnail_right{height: 52px;width: 30px;background: url("../images/thumbnail_right_33.jpg") no-repeat left center;margin-right: 21px;margin-top:47px;cursor: pointer;}
+.ddrw_thumbnail{height: 120px;margin-top: 9px;}
+.thumbnail_box{margin:0px 80px 0px 80px;overflow:hidden;position: relative;height: 120px;}
+.thumbnail_container{position: absolute;top: 0px;}
+.thumbnail{margin-right: 5px;width: 75px;float: left;margin-top: 36px;}
+.thumbnail a,.thumbnail a img{display: block;}
+.thumbnail_select{margin-top: 0px;width: 120px;}
+.thumbnail{position: relative;}
+.thumbnail_select img{height: 110px;width: 120px;}
+.thumbnail_select .thumbnail_name{display: block;position: absolute;top: 50px;width: 120px;text-align: center;left: 0px}
+/*平凉好人榜*/
+.goodList{position: relative;}
+.goodList_bg{position: absolute;top: 0px;left: 0px;z-index: -1;}
+.goodList_bg img{display: block;}
+.goodList_img_box a,.goodList_img_box a img{display: block;}
+.goodList_title{background:url("../images/stories_title_bg_06.png") no-repeat left 0px;margin-top: 33px;}
+.goodList_title p{color: #bc102e;font-size: 36px;line-height: 86px;font-weight: bold;padding-left: 25px;}
+.goodList_img a,.goodList_img a img{display: block;}
+.goodList_img_box{position: absolute;top: 0px;}
+.goodList_img{width: 270px;float: left;margin-right: 40px;position: relative;}
+.goodList_img:hover .goodList_zz{position: absolute;width: 100%;height: 320px;background:#000000;opacity: 0.5;filter:alpha(opacity=50);zoom: 1;}
+.period{height: 50px;line-height: 50px;padding-left: 17px;font-size: 20px;color: #ffffff;background:#bc102e;}
+.goodList_img:hover .period{background: #000000;}
+.period span{display: block;background:url("../images/goodlist_icon_03.png") no-repeat left center; height: 22px;width: 22px;float: right;margin-right: 20px;margin-top: 16px;}
+.goodList_img_container{height: 370px;width: 890px;overflow: hidden;margin-left: 55px;position: relative;}
+.goodList_left{background:url("../images/goodlist_left_06.png") no-repeat left center; width: 20px;height: 64px;cursor: pointer;margin-top: 147px;}
+.goodList_right{background:url("../images/goodlist_right_06.png") no-repeat left center; width: 20px;height: 64px;cursor: pointer;margin-top: 147px;}
+.goodList_cont{margin-top: 52px;}
+/*平凉一天*/
+.plDay{position: relative;}
+.plDay_bg{position: absolute;top: 0px;left: 0px;z-index: -1;}
+.plDay_bg img{display: block;position: absolute;}
+.plDay_title{background:url("../images/stories_title_bg_06.png") no-repeat left 0px;margin-top: 40px;margin-bottom: 40px;}
+.plDay_title p{color: #ffffff;font-size: 36px;line-height: 86px;font-weight: bold;padding-left: 25px;}
+.plDay_period{width: 181px;height: 45px;margin-left: 181px;}
+.plDay_period p{color: #ffffff;font-size: 16px;line-height: 45px;background: #bc102e;text-align: center;display: block;height: 45px;}
+.plDay_period p span{font-size: 36px;margin: 0px 18px;line-height: 45px;}
+.plDay_cont_img a,.plDay_cont_img img{display: block;}
+.plDay_cont_img{float: left;}
+.plDay_cont_txt{margin-left:363px;height: 271px;position: relative;margin-top: 1px;}
+.plDay_cont_txt_bg{position: absolute;background: #000000;opacity: 0.5;filter:alpha(opacity=50);zoom: 1;width: 100%;height: 271px;top: 0px;left: 0px;z-index: -1;}
+.plDay_cont_title p{font-size: 30px;float: left;height: 30px;display: block;color: #ffffff;line-height: 1;}
+.plDay_cont_title a{display: block;height: 30px;line-height: 30px;background: #bc102e;text-align: center;margin-left: 22px;color: #ffffff;font-size: 15px;width: 80px;float: left;margin-top: 2px;}
+.plDay_cont_title{margin-top: 30px;margin-left: 32px;height: 32px;*padding-top: 30px;}
+.plDay_cont_text{margin-left: 32px;margin-right: 24px;color: #ffffff;font-size: 15px;line-height: 32px;margin-top: 18px;}
+.pdDay_btn{width: 300px;height: 60px;bottom: 0px;margin-top:-34px;margin-left: 400px;}
+.pdDay_btn_bg{height: 60px;width: 100%;background:#ffffff;opacity: 0.1;filter:alpha(opacity=10);zoom: 1;z-index: -1;top: 0px;left: 0px;position: absolute;}
+.pdDay_btn_next,.pdDay_btn_perv{height: 60px;width: 60px;position: relative;cursor: pointer;}
+.pdDay_perv_icon{height: 60px;background: url("../images/plDay_perv_icon_03.png") no-repeat left center;}
+.pdDay_next_icon{height: 60px;background: url("../images/plDay_next_icon_03.png") no-repeat left center;}
+.pdDay_btn_tip{margin: 0px 60px;position: relative}
+.pdDay_btn_tip_bg{height: 60px;width: 100%;position: absolute;top: 0px;left: 0px;background: #ffffff;opacity: 0.3;filter:alpha(opacity=30);zoom: 1;z-index: -1;}
+.pdDay_btn_tip p{line-height: 60px;text-align: center;color: #ffffff;font-size: 14px;}
+.plDay_cont{position: relative;overflow: hidden;height:409px;width: 100%;}
+.plDay_container{position: absolute;top: 0px;height: 100%;width: 100%;}
+.plDay_cont_box{float: left;}
+.page{overflow: hidden;position: absolute;}
+.active_page{z-index: 100; }
+.body{overflow: hidden;}
+/*平凉人物 Ends*/

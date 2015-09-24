@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<title>鼠标滚轮翻页</title>
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/global.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+	<script src="js/jquery.mousewheel.js" type="text/javascript"></script>
+	
+	<style type="text/css">
+		body{overflow:hidden;}
+		.scene {width:100%;min-height:100vh;overflow:hidden;}
+		.scene1{background:#2c2c2c;}
+		.scene2{background:#e9b690;}
+		.scene3{background:#54cd8c;}
+		.scene4{background:#dfdbc4;}
+		.scene5{background:#8182a6;}
+		.scene a{display:block;margin-top:20%;text-align:center;font-size:200%;line-height:120%;color:#2c2c2c;}
+		
+		.scene1 a{color:#fff;}
+	</style>
+</head>
+
+<body>
+	<div class="scene scene1" id="demo">
+		<!-- <a href="#">We are emotive</a> -->
+		<a href="#">jquery插件默认是不支持鼠标中滚轮事件的,这个例子是使用jquery的mousewheel插件用于添加跨浏览器的鼠标滚轮</a>
+	</div>
+	<div class="scene scene2">
+		<a href="#">如果获取特殊事件监听方法失败，则使用addEventListener进行添加事件，.addEventListener(type, eventHandle, false);</a>anchor="top"
+	</div>
+	<div class="scene scene3"><a href="#">Hanging with Marteria</a></div>
+	<div class="scene scene4"><a href="#">More is more</a></div>
+	<div class="scene scene5"><a href="#">We're excited to excite you</a></div>
+
+
+	<script type="text/javascript">
+		$(function () {
+			scrollPage(); //滑动翻页
+		})
+		
+		// 滑动翻页
+		function scrollPage () {
+		
+			var currentPage = 1;  //从1开始
+			var maxPage = $(".scene").length;
+		
+			document.addEventListener("mousewheel", throttle(handlePaging, 100), false);
+			document.addEventListener("DOMMouseScroll", throttle(handlePaging, 100), false);
+			function handlePaging (e) {
+				e.preventDefault();
+				e = e || window.event;
+				var dir = Number(e.wheelDelta || -e.detail) > 0 ? 1 : -1;
+				if (currentPage - dir >= 1 && currentPage - dir <= maxPage) {
+					currentPage -= dir;
+				}
+				jumpTo(currentPage);
+				console.log(currentPage);
+			}
+		
+			// 跳转至某页
+			function jumpTo (n) {
+				var offTop = $(".scene" + n).offset().top;
+				$("html,body").stop();
+				$("html,body").animate({
+					scrollTop: offTop
+				},500);
+			}
+		
+		}
+		
+		// 阻止滚轮事件频繁触发
+		var throttle = function(fn, timeout){
+			var timer;
+			return function(){
+				var self = this,
+					args = arguments;
+				clearTimeout( timer );
+				timer = setTimeout(function(){
+					fn.apply( self, args );
+				}, timeout );
+			};
+		}
+	
+	</script>
+</body>
+</html>

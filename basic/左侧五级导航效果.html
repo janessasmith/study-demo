@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/public.css">
+<style type="text/css">
+
+	body{font-family: "微软雅黑"; background: #666666;}
+	.menu_fa{height: 750px; width: 275px; position:relative; overflow: hidden;background: #4c5f70; float: left;}
+	.menu{width: 275px; overflow: hidden; background: #4c5f70; margin: 0px auto;}
+	.menu ul.first li{font-family: "微软雅黑"; overflow: hidden; white-space: nowrap; border-bottom: 1px solid #627281;}
+	.menu ul.first li h2.now{background: #4496d2;}
+	.menu ul.first li h2{font:16px/56px '微软雅黑'; color: #fff; text-indent: 12px; cursor: pointer; background: #4d5e70;}
+	.menu ul.first li h2 span{width: 20px; height: 22px; float: left; margin-left: 17px; margin-top: 18px;}
+	.menu ul.first li h2:hover{background: #4496d2;}
+	.s_div{overflow: hidden; width: 100%;}
+	ul.first li h2 span.f1{background:url(images/first1.png) no-repeat}
+	ul.first li h2 span.f2{background:url(images/first2.png)  no-repeat}
+	ul.first li h2 span.f3{background:url(images/first3.png) no-repeat}
+	ul.first li h2 span.f4{background:url(images/first4.png)  no-repeat}
+	ul.first li h2 span.f5{background:url(images/first5.png)  no-repeat}
+	ul.first li h2 span.f6{background:url(images/first6.png) no-repeat}
+	.menu ul.second li{overflow: hidden; white-space: nowrap; border-bottom: 1px solid #47596d;background: #3e4f61; position: relative;}
+	.menu ul.second li a{ width:100%; height: 45px; display: block; text-indent: 64px; font-size: 15px; color: #aeb2b7; line-height: 45px;}
+	span.menu2_in{background:url(images/left1.png) center no-repeat; width: 36px; height: 30px; position: absolute; left: 29px; top: 8px; cursor: pointer;}
+	.menu ul.second li span.now{background:url(images/down1.png) center no-repeat; width: 36px; height: 30px; left:29px; top: 8px;}
+	.menu ul.second li.now{/*background:url(images/down1.png) 40px 20px no-repeat #474f68;*/ background: #474f68}
+	.menu ul.second li:hover{background: #344a79;}
+	.menu ul.third li{overflow: hidden; white-space: nowrap; /*border-bottom: 1px solid #3e4f61;*/ background:#3e4f61; position: relative;}
+	.menu ul.third li.now{background: #fff;}
+	.menu ul.third li:hover{background: #fff;}
+	span.menu3_in{background:url(images/left2.png) center no-repeat ; width: 40px; height: 30px; position: absolute; left: 210px; top: 3px; cursor: pointer;}
+	.menu ul.third li span.now1{background:url(images/left2_now.png) center no-repeat; width: 40px; height: 30px;position: absolute; left: 210px; top: 3px; cursor: pointer;}
+	.menu ul.third li a{height: 39px; display:block; text-indent: 78px; font-size: 14px; color: #959ba2; line-height: 39px; }
+	.share{width: 275px; height: 750px; position: absolute; top:0px; left: 275px; /*background: #fff;*/ z-index: 998;}
+	.div_all ul.fourth{overflow: hidden; margin-top: 10px; width: 256px; margin-left: 10px;}
+	.div_all ul.fourth li{overflow: hidden; white-space: nowrap; border-bottom: 1px solid #fff; position: relative;
+		background: #f3f5f8}
+	.div_all ul.fourth li.now{background:#44a4d2}
+	.div_all ul.fourth li h2{font:15px/38px '微软雅黑';color: #7a8490; cursor: pointer; text-indent: 25px;}
+	span.span4{background:url(images/left3.png) center no-repeat ; width: 40px; height: 30px; position: absolute; left: 210px; top: 3px; cursor: pointer;}
+	.div_all ul.fourth li span.now{background:url(images/down3.png) center no-repeat ;}
+	.div_all ul.fourth li span:hover{color: #fff;}
+	.div_all ul.fourth li h2.now{color: #fff;}
+	.div_all ul.fourth li h2:hover{color: #fff;background:#44a4d2;}
+	.div_all ul.fifth li{overflow: hidden; white-space: nowrap;}
+	.div_all ul.fifth li a{height: 38px; display: block; text-indent: 45px; font-size: 13px; color: #73838f; line-height: 38px;/*background:url(images/left4.png) 33px 16px no-repeat #fff;*/ background: #fff;}
+	.div_all ul.fifth li a.now{/*background:url(images/left4.png) 33px 16px no-repeat #def1f7;*/ background: #def1f7}
+	.div_all ul.fifth li a:hover{background-color: #def1f7;}
+	.btn{position: absolute;left: 275px; top:73px; width: 55px; height: 107px; z-index: 999; background:url(images/new_btn_03.png) no-repeat;}
+	.btn_up{position: absolute;background:url(images/s.gif) no-repeat; width:58px; height: 57px; left: 108px; top: 0px; z-index: 99; display: none; cursor: pointer;}
+	.btn_up1{position: absolute;background:url(images/y.gif) no-repeat; width:58px; height: 57px; left: 108px; top: 0px; z-index: 99; display: none; cursor: pointer;}
+	.btn_down{position: absolute;background:url(images/x.gif) no-repeat; width: 23px; height: 19px; left: 108px; top: 722px; z-index: 99; display: none; cursor: pointer;}
+	.btn_down1{position: absolute;background:url(images/z.png) no-repeat; width: 23px; height: 19px; left: 108px; top: 722px; z-index: 99;  cursor: pointer;}
+	.text_div{width: 500px; float: left; height: 500px; background: green; margin-left: 20px;}
+
+</style>
+<title>Menu</title>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js">
+</script>
+</head>
+
+<body ondblclick="return false;"  onselectstart="return false" onselect='false'  style="-moz-user-select:none;">
+	<div class="div_all" style="position:relative">
+			<div class="btn" style="display:none">
+		
+			</div>
+			<div class="share" style="display:none">
+				<ul class="fourth">
+					<li class="menu4">
+						<span class="span4"></span>
+						<h2 class="h4">
+								时局
+						</h2>
+						<ul class="fifth" style="display:none">
+							<li><a href="javascript:void(0)" class="menu5">国家元首、地区长官</a></li>
+							<li><a href="javascript:void(0)"  class="menu5">统一线组织</a></li>
+							<li><a href="javascript:void(0)"  class="menu5">国际共产主义运动</a></li>
+						</ul>
+						<!--第五级-->
+					</li>
+					<li class="menu4">
+						<span class="span4"></span>
+						<h2 class="h4">国家元首、地区长官</h2>
+					</li>
+					<li class="menu4">
+						<span class="span4"></span>
+						<h2 class="h4">政府</h2>
+					</li>
+					<li class="menu4">
+						<span class="span4"></span>
+						<h2 class="h4">党派</h2>
+					</li>
+					<li class="menu4">
+						<span class="span4"></span>
+						<h2 class="h4">统一线组织</h2>
+						<ul class="fifth" style="display:none">
+							<li><a href="javascript:void(0)"  class="menu5">国家元首、地区长官1</a></li>
+							<li><a href="javascript:void(0)"  class="menu5">统一线组织1</a></li>
+							<li><a href="javascript:void(0)"  class="menu5">国际共产主义运动1</a></li>
+						</ul>
+					</li>
+					<li class="menu4">
+						<span class="span4"></span>
+						<h2 class="h4">社会团体</h2>
+					</li>
+					<li class="menu4">
+						<span class="span4"></span>
+						<h2 class="h4">国际共产主义运动</h2>
+						<ul class="fifth" style="display:none">
+							<li><a href="javascript:void(0)"  class="menu5">国家元首、地区长官2</a></li>
+							<li><a href="javascript:void(0)"  class="menu5">统一线组织2</a></li>
+							<li><a href="javascript:void(0)"  class="menu5">国际共产主义运动2</a></li>
+						</ul>
+					</li>
+				</ul>
+				<!--第四级菜单-->
+			</div>
+	</div>
+	<div class="menu_fa">
+		
+		<div class="btn_up" id='btn_up'></div>
+		<div class="btn_down" id='btn_down'></div>
+		<div class="menu left">
+		
+			<ul class="first">
+				<li class='u1'>
+					<h2 class='h21'>
+						<span class='f1'></span>
+						政治
+					</h2>
+					<div class="s_div" style="display:none">
+							<ul class="second">
+								<li class='menu2'>
+									<span class='menu2_in'></span>
+									<a href="javascript:void(0)" class='menu_s2'>
+											国家概况、地区概况
+	 
+									</a>
+									<ul class="third" style="display:none">
+										<li class="menu3">
+											<span class='menu3_in'></span>
+											<a href="javascript:void(0)" class="menu_s3">中国概况</a>
+											<ul class="fourth1" style="display:none"></ul>
+										</li>
+										<li class="menu3">
+											<span class='menu3_in'></span>
+											<a href="javascript:void(0)" class="menu_s3">美国概况</a>
+											<ul class="fourth1" style="display:none"></ul>
+										</li>
+											
+										<li class="menu3">
+											<span class='menu3_in'></span>
+											<a href="javascript:void(0)" class="menu_s3">澳大利亚概况</a>
+										</li>
+									</ul>
+									<!--第三级-->
+								</li>
+								<li class="menu2">
+									<span class='menu2_in'></span>
+									<a href="javascript:void(0)" class='menu_s2'>时局</a>
+								</li>
+								<li class="menu2">
+									<span class='menu2_in'></span>
+									<a href="javascript:void(0)" class="menu_s2">国家元首、地区长官</a>
+								</li>
+							</ul>
+					</div>
+				
+					<!--第二级-->
+				</li>
+
+				<li class="u1">
+					<h2 class="h21">
+						<span class='f2'></span>
+						法律、司法
+					</h2>
+					<div class="s_div" style="display:none">
+							<ul class="second">
+								<li class="menu2">
+									<span class='menu2_in'></span>
+									<a href="javascript:void(0)" class='menu_s2'>国家概况、地区概况</a>
+									<ul class="third" style="display:none">
+										<li class="menu3">
+											<span class='menu3_in now'></span>
+											<a href="javascript:void(0)" class="menu_s3">中国概况</a>
+										</li>
+										<li class="menu3">
+											<span class='menu3_in'></span>
+											<a href="javascript:void(0)" class="menu_s3">美国概况</a>
+											<ul class="fourth1" style="display:none"></ul>
+										</li>
+										<li class="menu3">
+											<span class='menu3_in'></span>
+											<a href="javascript:void(0)" class="menu_s3">澳大利亚概况</a>
+										</li>
+									</ul>
+									<!--第三级-->
+								</li>
+								<li class="menu2">
+									<span class='menu2_in'></span>
+									<a href="javascript:void(0)" class='menu_s2'>时局</a>
+									<ul class="third" style="display:none">
+											<li class="menu3">
+												<span class='menu3_in'></span>
+												<a href="javascript:void(0)" class="menu_s3">中国概况1</a>
+											</li>
+											<li class="menu3">
+												<span class='menu3_in'></span>
+												<a href="javascript:void(0)" class="menu_s3">美国概况1</a>
+												<ul class="fourth1" style="display:none"></ul>
+											</li>
+											<li class="menu3">
+												<span class='menu3_in'></span>
+												<a href="javascript:void(0)" class="menu_s3">澳大利亚概况1</a>
+											</li class="menu3">
+									</ul>
+								</li>
+								<li class="menu2">
+									<span class='menu2_in'></span>
+									<a href="javascript:void(0)" class="menu_s2">国家元首、地区长官</a>
+									<ul class="third" style="display:none">
+										<li class="menu3">
+											<span class='menu3_in'></span>
+											<a href="javascript:void(0)" class="menu_s3">中国概况2</a>
+										</li>
+										<li class="menu3">
+											<span class='menu3_in'></span>
+											<a href="javascript:void(0)" class="menu_s3">美国概况2</a>
+										</li>
+										<li class="menu3">
+											<span class='menu3_in'></span>
+											<a href="javascript:void(0)" class="menu_s3">澳大利亚概况2</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+					</div>
+				</li>
+				<li class="u1">
+					
+					<h2 class="h21">
+						<span class='f3'></span>
+						军事
+					</h2>
+				</li>
+				<li class="u1">
+					<h2 class="h21">
+						<span class='f4'></span>
+						社会、劳动、灾难事故
+					</h2>
+				</li>
+				<li class="u1">
+					<h2 class="h21">
+						<span class='f5'></span>
+						经济
+					</h2>
+				</li>
+				<li class="u1">
+					<h2 class="h21">
+						<span class='f6'></span>
+						基本建设、建筑业、房地产</h2>
+				</li>
+			</ul>
+			<!--一级菜单结束-->
+		</div>
+	</div>
+	<div class="text_div"></div>
+	<!--菜单脚本-->
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+
+				$(".menu_fa").scrollTop(0);
+
+				/*检查按钮*/
+				function searchScroll()
+				{
+					var scrollTop=$('.menu_fa').scrollTop();
+					if(scrollTop==0)
+					{
+						$('#btn_up').addClass('btn_up1').removeClass('btn_up');
+					}
+					else
+					{	
+						$('#btn_up').addClass('btn_up').removeClass('btn_up1');
+					}
+				}
+
+				searchScroll();
+				
+				/*按钮显示、隐藏*/
+				function disBtn()
+				{
+					var menu_Height=parseInt($('.menu').css('height'))-parseInt($('.menu_fa').css('height'));
+					if(menu_Height>0)
+					{
+						$('#btn_up').show();
+					}
+					else
+					{
+						$('#btn_up').hide();
+					}
+				}
+				disBtn();
+				/*向下点击按钮*/
+				$('#btn_down').mousedown(function()
+				{
+					function a()
+					{
+						var menu_Height=parseInt($('.menu').css('height'))-parseInt($('.menu_fa').css('height'));
+						var now_menuScroll=$('.menu_fa').scrollTop();
+						if(menu_Height - now_menuScroll>0)
+						{
+							var scrollTop=$('.menu_fa').scrollTop();
+							scrollTop=scrollTop+5;
+							$('.menu_fa').scrollTop(scrollTop);
+							$('#btn_up').removeClass('btn_up1').addClass('btn_up');
+							var menu_Height=parseInt($('.menu').css('height'))-parseInt($('.menu_fa').css('height'));
+							var now_down=parseInt($('#btn_down').css('top'));
+							var now_up=parseInt($('#btn_up').css('top'));
+							now_down=now_down+5;
+							now_up=now_up+5;
+							$('#btn_down').animate({top:now_down},10);
+							$('#btn_up').animate({top:now_up},10);
+						}
+						else
+						{
+							$('#btn_down').removeClass('btn_down').addClass('btn_down1');
+						}
+					}
+					timer=setInterval(a,100);
+					
+				});
+				$('#btn_down').mouseup(function()
+				{
+					clearInterval(timer);
+				});
+				/*向上点击按钮*/
+				$('#btn_up').mousedown(function()
+				{
+					function b()
+					{
+						var scrollTop=$('.menu_fa').scrollTop();
+						$('#btn_down').removeClass('btn_down1').addClass('btn_down');
+						var menu_Height=parseInt($('.menu').css('height'))-parseInt($('.menu_fa').css('height'));
+						var now_menuScroll=$('.menu_fa').scrollTop();
+						if(scrollTop>0)
+						{
+								var scrollTop=$('.menu_fa').scrollTop();
+								scrollTop=scrollTop-5;
+								$('.menu_fa').scrollTop(scrollTop);
+								var menu_Height=parseInt($('.menu').css('height'))-parseInt($('.menu_fa').css('height'));
+								var now_down=parseInt($('#btn_down').css('top'));
+								var now_up=parseInt($('#btn_up').css('top'));
+								now_down=now_down-5;
+								now_up=now_up-5;
+								$('#btn_down').animate({top:now_down},10);
+								$('#btn_up').animate({top:now_up},10);		
+						}
+						else
+						{
+							$('#btn_up').addClass('btn_up1').removeClass('btn_up');
+						}
+					}
+					timer1=setInterval(b,100);
+				});
+				$('#btn_up').mouseup(function()
+				{
+					clearInterval(timer1);
+				});
+
+			/*获取高度函数*/
+			function getHeight()
+			{
+			    var menu_Height=$('.menu').height();
+				var menuFa_Height=$('.menu_fa').height();
+				up=$('.btn_up').height();
+			 	down=$('.btn_down').height();
+				if(menu_Height>menuFa_Height)
+				{
+					$('#btn_up').show();
+					$('#btn_down').show();
+
+				}
+				else
+				{
+					$('#btn_up').hide();
+					$('#btn_down').hide();
+					$('#btn_up').css('top','0px');
+					$('#btn_down').css('top','722px');
+				}
+			}
+			
+			/*一级菜单点击*/
+			$('ul.first h2.h21').click(function()
+			{
+				var menu_Height=$('.menu').height();
+				var menuFa_Height=$('.menu_fa').height();
+				$('#btn_down').removeClass('btn_down1').addClass('btn_down');
+				var iTarget=$('.menu').height();
+				var Index=$('ul.first h2.h21').index(this);
+				var len_h2=$('.h2');
+					if($('.h21').eq(Index).hasClass('now'))
+					{
+						$('.h21').eq(Index).removeClass('now');
+					}
+					else
+					{
+						$('.h21').removeClass('now');
+						$('.h21').eq(Index).addClass('now');
+					}
+				$('.share').hide();
+				var len_h2=$('.h21').length;
+				
+				if($('.s_div').eq(Index).css('display')=='none')
+	                {
+	                	$('.s_div').eq(Index).show(500);
+	                    $('.s_div').eq(Index).css('display','block');
+	                    
+	                } 
+	            else if($('.s_div').eq(Index).css('display')=='block')
+	            {
+	                    $('.s_div').eq(Index).hide(500);
+	                    $('li.u1 h2.h21').removeClass('now');
+
+	            }
+	            searchScroll();
+			});
+			/*二级菜单做判断*/
+			var len=$('span.menu2_in').length;
+			for(var i=0;i<len;i++)
+			{
+				if($('span.menu2_in').eq(i).next().next().length>0)
+				{
+					$('span.menu2_in').hide();
+					$('a.menu_s2').eq(i).prev().addClass('menu2_btn');
+					$('.menu2_btn').show();
+					$('.menu2_btn').next().addClass('menu_s22');
+				}
+			}
+			/*三级菜单做判断*/
+			var len1=$('span.menu3_in').length;
+			for(var i=0;i<len1;i++)
+			{
+				if($('span.menu3_in').eq(i).next().next().length>0)
+				{
+					$('span.menu3_in').hide();
+					$('a.menu_s3').eq(i).prev().addClass('menu3_btn');
+					$('.menu3_btn').show();
+					$('span.menu3_btn').next().addClass('menu_menu_s33').removeClass('menu_s3');
+
+				}
+				
+			}
+			/*最后一级菜单*/
+			var len2=$('span.span4').length;
+			for(var i=0;i<len2;i++)
+			{
+				if($('span.span4').eq(i).next().next().length>0)
+				{
+					$('.span4').hide();
+					$('.h4').eq(i).prev().addClass('menu4_btn');
+					$('.menu4_btn').show();
+				}
+				
+			}
+
+			var len2=$('span.span4').length;
+			for(var i=0;i<len2;i++)
+			{
+				if($('ul.fourth h2').eq(i).next().length>0)
+				{
+					$('ul.fourth h2').eq(i).attr('_hasChildren','true');
+				}
+			}
+			/*二级菜单点击开始*/
+			/*对应index值*/
+
+			/*二级菜单添加类名开始*/
+			$('a.menu_s2').click(function(event)
+			{
+				 event.stopPropagation();//阻止事件冒泡
+				 $('.menu3').removeClass('now');
+				 $('.menu4').removeClass('now');
+				 $('.menu5').removeClass('now');
+				 $('.h4').removeClass('now');
+				 $('li.menu2').removeClass('now');
+				 $('.share').hide();
+				 $(this).parent().addClass('now');
+			});
+			$('a.menu_s22').click(function(event)
+			{
+				 event.stopPropagation();//阻止事件冒泡
+				 $('.menu3').removeClass('now');
+				 $('.menu4').removeClass('now');
+				 $('.menu5').removeClass('now');
+				 $('.h4').removeClass('now');
+				 $('li.menu2').removeClass('now');
+				 $(this).parent().addClass('now');
+			
+			});
+			/*二级菜单添加类名结束*/
+
+			/*二级菜单按钮开始*/
+			$('span.menu2_in').click(function(event)
+			{
+				 event.stopPropagation();
+			});
+			$('span.menu2_btn').click(function(event)
+			{
+				// $('#btn_up').removeClass('btn_up1').addClass('btn_up');
+				$('#btn_down').removeClass('btn_down1').addClass('btn_down');
+				$(".menu_fa").scrollTop(0);
+				event.stopPropagation();
+				var menu_Height=$('.menu').height();
+				var menuFa_Height=$('.menu_fa').height();
+				if(menu_Height>menuFa_Height)
+				{
+					$(".menu_fa").scrollTop(0);
+					$('.btn_up').css('top','0px');
+					$('.btn_down').css('top','722px');
+				}
+				var Index1=$('span.menu2_btn').index(this);
+				$('.menu3 span').removeClass('now1');
+				$('.share').hide();
+				if($('.third').eq(Index1).css('display')=='none')
+	             {
+	             		$(this).removeClass('now');
+	             		$(this).addClass('now');
+	                    $('.third').eq(Index1).show(500);
+	                 	$('.third').eq(Index1).css('display','block');
+	                } 
+	            	else if($('.third').eq(Index1).css('display')=='block')
+	            	{
+	            		$(this).removeClass('now');
+	                    $('.third').eq(Index1).hide(500);
+	           		 }
+	           	searchScroll();
+			});
+			/*二级菜单按钮结束*/
+			/*二级菜单点击结束*/
+
+			/*三级菜单点击开始*/
+			/*三级菜单添加类名开始*/
+			$('a.menu_s3').click(function(event)
+			{
+				 getHeight();
+				 event.stopPropagation();//阻止事件冒泡
+				 $('.menu2').removeClass('now');
+				 $('li.menu3').removeClass('now');
+				 $('.share').hide();
+				 $('.menu4').removeClass('now');
+				 $('.h4').removeClass('now')
+				 $('.menu5').removeClass('now');
+				 $(this).parent().addClass('now');
+			});
+			$('a.menu_menu_s33').click(function(event)
+			{
+				 event.stopPropagation();//阻止事件冒泡
+				 $('.menu2').removeClass('now');
+				 $('li.menu3').removeClass('now');
+				 $('.menu4').removeClass('now');
+				 $('.h4').removeClass('now')
+				 $('.menu5').removeClass('now');
+				 $(this).parent().addClass('now');
+			});
+			/*三级菜单添加类名结束*/
+
+			/*三级菜单按钮开始*/
+			$('span.menu3_in').click(function(event)
+			{
+				 event.stopPropagation();
+				 $('.share').hide();
+				 $('.menu3_btn').removeClass('now');
+			});
+			$('span.menu3_btn').click(function(event)
+			{
+				 event.stopPropagation();
+				 // 使iframe自定义宽度
+				 //debugger;
+				 // if(window.parent.window){
+				 // 	//$(window.parent.window.iframe).attr("width", "750px");
+				 // 	//window.parent.window.document.getElementById("ifm").style.width = "750px";
+				 // 	window.parent.window.$("#channelTree").css({"width":"750px","z-index":999,"position":"absolute"});
+				 // }
+
+				 if($(this).hasClass('now1'))
+				 {
+				 	$(this).removeClass('now1');
+				 	$('.share').hide(500);
+				 }
+				 else
+				 {
+				 	$('.menu3_btn').removeClass('now1');
+				 	$(this).addClass('now1');
+				 	$('.share').css('background','#fff');
+				 	$('.share').show(500);
+				 }
+
+			});
+			/*三级菜单按钮结束*/
+			/*三级菜单结束*/
+			/*四级菜单开始*/
+			/*四级菜单添加类名*/
+			$('.menu4').click(function(event)
+			{
+				event.stopPropagation();
+				 $('.menu2').removeClass('now');
+				 $('li.menu3').removeClass('now');
+				 $('.menu5').removeClass('now');
+				 $('.menu4').removeClass('now');
+				 $('.h4').removeClass('now');
+				 $('.share').css('width','275px');
+				 $('.share').css('background','');
+				 // $('.share').css("background-image","url(images/root.png)");
+				  $('.share').css('background','#fff');
+				 $('.share').stop().animate({left:0},500);
+				 $('.btn').show();
+				var Index_h4=$('.menu4').index(this);
+				if($(this).hasClass('now'))
+				{
+					$(this).removeClass('now');
+					$('.h4').eq(Index_h4).removeClass('now');
+				}
+				else
+				{
+					$('.menu4').removeClass('now');
+					$('.h4').removeClass('now');
+					$(this).addClass('now');
+					$('.h4').eq(Index_h4).addClass('now');
+				}
+			});
+			/*四级菜单添加类名结束*/
+			/*四级菜单点击开始*/
+			$('.menu4_btn').click(function(event)
+			{
+				event.stopPropagation();
+				 $('.share').css('width','275px');
+				 $('.share').css('background','');
+				 // $('.share').css("background-image","url(images/root.png)");
+				 $('.share').stop().animate({left:0},500);
+				  $('.share').css('background','#fff');
+				   $('.btn').show();
+				var Index_4=$('.menu4_btn').index(this);
+				 if($(this).hasClass('now'))
+				 {
+				 	$(this).removeClass('now');
+				 	$('.fifth').eq(Index_4).hide(500);
+				 	
+				 }
+				 else
+				 {
+				 	$(this).addClass('now');
+				 	$('.fifth').eq(Index_4).show(500);
+
+				 }
+			});
+			/*四级菜单点击结束*/
+			/*四级菜单点击未完待续*/
+
+			/*五级菜单点击开始*/
+			/*五级菜单添加类名*/
+			$('.menu5').click(function(event)
+			{
+				 event.stopPropagation();
+				  $('.menu2').removeClass('now');
+				 $('li.menu3').removeClass('now');
+				 $('.menu5').removeClass('now');
+				 $('.menu4').removeClass('now');
+				 $('.h4').removeClass('now');
+				 $('.share').css('width','275px');
+				 $('.share').css('background','');
+				  $('.share').css('background','#fff');
+				 // $('.share').css("background-image","url(images/root.png)");
+				 $('.share').stop().animate({left:0},500);
+				 $('.btn').show();
+				 if($(this).hasClass('now'))
+				 {
+				 	$(this).removeClass('now');
+				 }
+				 else
+				 {
+				 	$('.menu5').removeClass('now');
+				 	$(this).addClass('now');
+				 }
+			});
+			/*五级菜单添加类名结束*/
+			/*五级菜单结束*/
+			/*四、五级菜单展开、收缩*/
+			$('.btn').click(function()
+			{
+				 $(this).hide();
+				 $('.share').css('width','275px');
+				 $('.share').css("background-image","");
+				 $('.share').css('background','#fff');
+				 $('.share').stop().animate({left:275},500);
+			});
+			var timer=setInterval(getHeight,50);
+		});
+	</script>
+</body>
+</html>

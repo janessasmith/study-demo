@@ -1,0 +1,8 @@
+/*global*/
+body { line-height:1.6; font-family:'microsoft yahei','stheiti',sans-serif; font-size:1em; color:#333; }
+input, textarea { font-family:'microsoft yahei','stheiti',sans-serif; }
+a { color: #2b97e8; }
+a:hover { color: #1a80cc; }
+::selection { background:#2b97e8; color:#fff; }
+::-moz-selection { background:#2b97e8; color:#fff; } 
+input, textarea { border: 1px solid #dfdfdf; }
